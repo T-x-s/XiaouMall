@@ -1,22 +1,16 @@
-.box{
-    position: relative;
-}
 header {
+  position: relative;
   width: 100vw;
   height: 0.8rem;
   background-color: orange;
   color: #ffffff;
-  text-align: center;
   line-height: 0.8rem;
 }
-.box .GoBack{
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-decoration: none;
-    color: #ffffff;
-    padding-top: 0.2rem;
-    padding-right: 0.3rem;
+header .center {
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
 }
 .bottom {
   padding-left: 0.5rem;
@@ -46,7 +40,6 @@ header {
   background-color: orange;
   border-radius: 0.1rem;
 }
-.bottom .login a {
-  text-decoration: none;
+.bottom .login span {
   color: #ffffff;
 }

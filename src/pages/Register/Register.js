@@ -6,9 +6,9 @@ export default class Register extends Component {
     return (
       <div className="box">
         <header>
+          <GoBack></GoBack>
           <span className="center">登录</span>
         </header>
-        <GoBack></GoBack>  
         <div className="bottom">
           <div className="ipt">
             <input type="text" defaultValue="手机号" />
@@ -17,7 +17,7 @@ export default class Register extends Component {
           </div>
           <p>忘记密码</p>
           <div className="login">
-            <a href="">注册</a>
+            <span>注册</span>
           </div>
         </div>
       </div>
