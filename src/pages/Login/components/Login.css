@@ -1,63 +1,65 @@
-.box{
-    position: relative;
+.box {
+  position: relative;
 }
-.headerLogin{
-    width: 100vw;
-    height: 0.8rem;
-    background-color: orange;
-    color: #ffffff;
-    text-align: center;
-    line-height: 0.8rem;
+.headerLogin {
+  width: 100vw;
+  height: 0.8rem;
+  background-color: orange;
+  color: #ffffff;
+  text-align: center;
+  line-height: 0.8rem;
 }
-.aOne{
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: #ffffff;
-    padding-top: 0.2rem;
-    padding-right: 0.3rem;
+.aOne {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+  padding-top: 0.2rem;
+  padding-right: 0.3rem;
 }
-.bottom{
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+.loginBottom {
+  margin-left: 0.5em;
+  margin-right: 0.5rem;
+  overflow: hidden;
 }
-.bottom .ipt{
-    /* position: relative; */
-    margin-top: 3rem;
+.loginBottom .ipt {
+  position: relative;
+  margin-top: 3rem;
 }
-/* .bottom .ipt span{
-    position: absolute;
-    top: 0.4rem;
-    left: 0;
+.loginBottom .ipt span {
+  position: absolute;
+  top: 0.4rem;
+  left: 0;
 }
-.bottom .ipt .password{
-    position: absolute;
-    top: 1.8rem;
-    left: 0;
-} */
-.bottom .ipt input{
-    width: 100%;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
-    padding-left: 1rem;
+.loginBottom .ipt .password {
+  position: absolute;
+  top: 1.7rem;
+  left: 0;
 }
-.bottom p{
-    margin-top: 0.5rem;
-    margin-left: 4.6rem;
-    margin-bottom: 0.5rem;
+.loginBottom .ipt input {
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 1.1rem;
+  outline: none;
 }
-.bottom .login{
-    width: 100%;
-    height: 1.1rem;
-    text-align: center;
-    line-height: 1.1rem;
-    background-color: orange;  
-    border-radius: 0.1rem;  
+.loginBottom p {
+  margin-top: 0.5rem;
+  margin-left: 4.6rem;
+  margin-bottom: 0.5rem;
 }
-.bottom .login span{
-    text-decoration: none;
-    color: #ffffff;
+.loginBottom .login {
+  width: 100%;
+  height: 1.1rem;
+  text-align: center;
+  line-height: 1.1rem;
+  background-color: orange;
+  border-radius: 0.1rem;
+}
+.loginBottom .login span {
+  text-decoration: none;
+  color: #ffffff;
 }

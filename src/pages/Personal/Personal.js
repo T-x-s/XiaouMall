@@ -4,7 +4,7 @@ export default class Personal extends Component {
     render() {
         return (
             <div>
-                <h1>Personal</h1>
+                my home
             </div>
         )
     }

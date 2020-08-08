@@ -1,0 +1,16 @@
+.indexHeader{
+    height: 1rem;
+    overflow: hidden;
+}
+.indexHeader .headerLogo{
+    margin-left: 0.3rem;
+    margin-top: 0.2rem;
+}
+.indexHeader .headerSearch{
+    float: right;
+    padding: 0.1rem 0.2rem;
+    background-color: silver;
+    border-radius: 0.2rem;
+    margin-right: 0.7rem;
+    margin-top: 0.3rem;
+}

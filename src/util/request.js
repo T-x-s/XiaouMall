@@ -12,3 +12,26 @@ axios.interceptors.response.use(res=>{
     return res;
 })
 
+//登录
+export const requestLogin=(data)=>{
+    return axios({
+        url:"/api/login",
+        method:"post",
+        data:qs.stringify(data)
+    })
+}
+
+//banner
+export const requestBanner=()=>{
+    return axios({
+        url:"/api/getbanner",
+        method:"get"
+    })
+}
+//banner
+export const requestList=()=>{
+    return axios({
+        url:"/api/getcatetree",
+        method:"get"
+    })
+}

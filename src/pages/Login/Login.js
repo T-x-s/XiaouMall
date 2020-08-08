@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./components/Login.css";
+import {requestLogin} from "../../util/request"
 export default class Login extends Component {
   constructor() {
     super();
@@ -10,29 +11,26 @@ export default class Login extends Component {
       },
     };
   }
-  // changeUser(e, key) {
-  //   this.setState({
-  //     user: {
-  //       ...this.state.user,
-  //       [key]: e.target.value,
-  //     },
-  //   });
-  // }
-  // login() {
-  //   requestLogin(this.state.user).then((res) => {
-  //     if (res.data.isok) {
-  //       sessionStorage.setItem("isLogin", 1);
-  //       this.props.history.push("/index");
-  //     } else {
-  //       alert(res.data.info);
-  //     }
-  //   });
-  // }
+  changeUser(e, key) {
+    this.setState({
+      user: {
+        ...this.state.user,
+        [key]: e.target.value,
+      },
+    });
+  }
+  login() {
+    requestLogin(this.state.user).then((res) => {
+      if (res.data.msg) {
+        // sessionStorage.setItem("isLogin", 1);
+        this.props.history.push("/index/home");
+      } else {
+        alert(res.data.msg);
+      }
+    });
+  }
   changeRegister() {
     this.props.history.push("/register");
-  }
-  changeLogin() {
-    this.props.history.push("/index");
   }
   render() {
     const { user } = this.state;
@@ -44,7 +42,7 @@ export default class Login extends Component {
         <span className="aOne" onClick={() => this.changeRegister()}>
           注册
         </span>
-        <div className="bottom">
+        <div className="loginBottom">
           <div className="ipt">
           <span>账号：</span>
             <input
@@ -54,14 +52,14 @@ export default class Login extends Component {
             />
             <span className="password">密码：</span>
             <input
-              type="text"
+              type="password"
               value={user.password}
               onChange={(e) => this.changeUser(e, "password")}
             />
           </div>
           <p>忘记密码</p>
           <div className="login">
-            <span onClick={() => this.changeLogin()}>登录</span>
+            <span onClick={() => this.login()}>登录</span>
           </div>
         </div>
       </div>

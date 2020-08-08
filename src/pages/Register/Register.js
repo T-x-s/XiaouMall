@@ -5,7 +5,7 @@ export default class Register extends Component {
   render() {
     return (
       <div className="box">
-        <header>
+        <header className="registerHeader">
           <GoBack></GoBack>
           <span className="center">登录</span>
         </header>

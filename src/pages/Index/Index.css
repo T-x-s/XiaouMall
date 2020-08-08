@@ -1,0 +1,19 @@
+.Index footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 0.8rem;
+    display: flex;
+    border-top: 1px solid #cccccc;
+}
+.Index footer a{
+    flex-grow: 1;
+    text-align: center;
+    line-height: 0.8rem;
+    color: #333333;
+    text-decoration: none;
+}
+.Index footer .select{
+    color: orange;
+}
