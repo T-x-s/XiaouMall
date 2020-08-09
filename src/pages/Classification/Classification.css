@@ -1,0 +1,48 @@
+.content {
+    overflow: hidden;
+}
+.content .ulList {
+    float: left;
+    width: 2.1rem;
+}
+.content .ulList li {
+    font-size: 0.3rem;
+    width:2.1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+.content .ulList .select{
+    color: orange;
+    border-left: 0.05rem solid blue;
+}
+.content .ulRight{
+   float: left;
+   width: 5.1rem;
+}
+.content .ulRight .shopList{
+    margin: 0.1rem;
+    float: left;
+    width: 2.2rem;
+    border: 1px solid blue;
+    border-radius: 0.2rem;
+}
+.content .ulRight .shopList img{
+    display: block;
+    width: 2.2rem;
+    height: 2.1rem;
+    border-top-right-radius:0.2rem;
+    border-top-left-radius:0.2rem;
+}
+.content .ulRight .shopList p{
+    width: 2.2rem;
+    font-size: 0.3rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    border-bottom-right-radius:0.2rem;
+    border-bottom-left-radius:0.2rem;
+    background-color: skyblue;
+}

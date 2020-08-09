@@ -4,13 +4,14 @@ import Banner from "./components/Banner/Banner";
 import List from "./components/List/List";
 import Nav from "./components/Nav/Nav";
 import { requestBanner } from "../../util/request";
-
+import {requestGoods} from "../../util/request";
 
 export default class Home extends Component {
   constructor() {
     super();
     this.state = {
-      banner: [],
+      banner:[],
+      list:[]
     };
   }
   componentDidMount() {
@@ -19,20 +20,30 @@ export default class Home extends Component {
       arr.forEach((item) => {
         item.img = this.$img + item.img;
       });
-      console.log(arr);
+      // console.log(arr);
       this.setState({
         banner: arr,
       });
     });
+    requestGoods().then((res)=>{
+      var arrList = res.data.list[0].content
+      arrList.forEach((item=>{
+        item.img = this.$img + item.img;
+      }))
+      // console.log(arrList);
+      this.setState({
+        list:arrList
+      })
+    })
   }
 
   render() {
-    const { banner } = this.state;
+    const { banner, list} = this.state;
     return (
       <div>
         <Header></Header>
         <Banner banner={banner}></Banner>
-        <List></List>
+        <List list={list}></List>
         <Nav></Nav>
       </div>
     );

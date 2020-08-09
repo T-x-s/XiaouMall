@@ -35,3 +35,28 @@ export const requestList=()=>{
         method:"get"
     })
 }
+
+//商品信息（首页）
+export const requestGoods=()=>{
+    return axios({
+        url:"/api/getindexgoods",
+        method:"get"
+    })
+}
+
+//分类信息
+export const requestGetGoods=()=>{
+    return axios({
+        url:"/api/getcatetree",
+        method:"get"
+    })
+}
+
+//商品信息
+export const GetGoodsInfo=(params)=>{
+    return axios({
+        url:"/api/getgoodsinfo",
+        method:"get",
+        params:params
+    })
+}
