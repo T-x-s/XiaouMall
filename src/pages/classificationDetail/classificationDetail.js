@@ -1,21 +1,26 @@
 import React, { Component } from "react";
-import { GetGoodsInfo } from "../../util/request";
+import { requestGetGoods,GetGoodsInfo } from "../../util/request";
 import GoBack from "../../components/goBack/goBack";
 import Header from "../../components/Header/Header";
-import "./classificationDetail.css"
+import "./classificationDetail.css";
+import querystring from "querystring";
 export default class classificationDetail extends Component {
   constructor() {
     super();
     this.state = {
       Info: [],
-      msg: "电视",
+      msg: "",
+      catename:''
     };
   }
   componentDidMount() {
-    let id = this.props.match.params.id;
-    console.log(this.props);
-    console.log(id);
-    GetGoodsInfo({ id: id }).then((res) => {
+    const catename = querystring.parse(this.props.location.search.slice(1))
+    // console.log(catename.id);
+    // console.log(catename.catename);
+    this.setState({
+      catename:catename.catename
+    })
+    requestGetGoods({ fid: catename.id}).then((res) => {
       this.setState({
         Info: res.data.list,
       });
@@ -27,9 +32,9 @@ export default class classificationDetail extends Component {
     return (
       <div className="detail">
         <GoBack></GoBack>
-        <Header msg={this.state.msg}></Header>
+        <Header msg={this.state.catename}></Header>
         <div className="show">
-          {(Info || []).map((item,index) => {
+          {(Info || []).map((item) => {
             return (
               <div className="bottom" key={item.id}>
                 <img src={item.img} alt="" />

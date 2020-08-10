@@ -20,7 +20,7 @@ function App() {
             <Route path="/register" component={Register}></Route>
             <Route path="/shoppingCart" component={shoppingCart}></Route>
             <Route path="/classification" component={Classification}></Route>
-            <Route path="/classificationDetail/:id" component={classificationDetail}></Route>
+            <Route path="/classificationDetail" component={classificationDetail}></Route>
             <Redirect to="/login"></Redirect>
         </Switch>
     </div>

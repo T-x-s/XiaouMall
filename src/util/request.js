@@ -20,6 +20,14 @@ export const requestLogin=(data)=>{
         data:qs.stringify(data)
     })
 }
+//注册
+export const requestRegister=(data)=>{
+    return axios({
+        url:"/api/register",
+        method:"post",
+        data:qs.stringify(data)
+    })
+}
 
 //banner
 export const requestBanner=()=>{
@@ -28,7 +36,7 @@ export const requestBanner=()=>{
         method:"get"
     })
 }
-//banner
+//分类树形结构
 export const requestList=()=>{
     return axios({
         url:"/api/getcatetree",
@@ -44,19 +52,29 @@ export const requestGoods=()=>{
     })
 }
 
-//分类信息
-export const requestGetGoods=()=>{
+//分类商品详细信息
+export const requestGetGoods=(params)=>{
     return axios({
-        url:"/api/getcatetree",
-        method:"get"
+        url:"/api/getgoods",
+        method:"get",
+        params:params
     })
 }
 
-//商品信息
+// 一个商品信息
 export const GetGoodsInfo=(params)=>{
     return axios({
         url:"/api/getgoodsinfo",
         method:"get",
         params:params
+    })
+}
+
+//加入购物车
+export const requestCartAdd=(data)=>{
+    return axios({
+        url:"/api/cartadd",
+        method:"post",
+        data:qs.stringify(data)
     })
 }

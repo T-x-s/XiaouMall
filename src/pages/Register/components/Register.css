@@ -4,7 +4,6 @@
   height: 0.8rem;
   background-color: orange;
   color: #ffffff;
-  line-height: 0.8rem;
 }
 .registerHeader .center {
   position: absolute;
@@ -17,7 +16,27 @@
   padding-right: 0.5rem;
 }
 .bottom .ipt {
+  position: relative;
   margin-top: 3rem;
+  overflow: hidden;
+}
+.bottom .ipt .phone{
+  padding-left: 1.5rem;
+}
+.bottom .ipt span {
+  position: absolute;
+  top: 0.4rem;
+  left: 0;
+}
+.bottom .ipt .name {
+  position: absolute;
+  top: 1.7rem;
+  left: 0;
+}
+.bottom .ipt .password {
+  position: absolute;
+  top: 3rem;
+  left: 0;
 }
 .bottom .ipt input {
   width: 100%;
@@ -26,6 +45,7 @@
   border-right: none;
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
+  padding-left: 1.1rem;
   outline: none;
 }
 .bottom p {

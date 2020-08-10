@@ -11,8 +11,11 @@ export default class Home extends Component {
     super();
     this.state = {
       banner:[],
-      list:[]
+      list:[],
     };
+  }
+  toDetail(e){
+    this.props.history.push("/Detail?id="+e)
   }
   componentDidMount() {
     requestBanner().then((res) => {
@@ -43,7 +46,7 @@ export default class Home extends Component {
       <div>
         <Header></Header>
         <Banner banner={banner}></Banner>
-        <List list={list}></List>
+        <List list={list} toDetail={(e)=>this.toDetail(e)}></List>
         <Nav></Nav>
       </div>
     );

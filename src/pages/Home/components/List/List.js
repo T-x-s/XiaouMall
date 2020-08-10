@@ -1,10 +1,8 @@
 import React from "react";
 import ListImg from "../../../../assets/img/img/home/1.jpg";
 import "./List.css";
-
 export default function List(props) {
-  const { list } = props;
-  console.log(list);
+ const {list}=props
   return (
     <div>
       <div className="listCenter">
@@ -24,7 +22,7 @@ export default function List(props) {
       <div className="listBottom">
         {(list || []).map((item) => {
           return (
-            <div className="bottom" key={item.id}>
+            <div className="bottom" key={item.id} onClick={()=>props.toDetail(item.id)}>
               <img src={item.img} alt="" />
               <div className="listBox">
                   <h2>{item.goodsname}</h2>

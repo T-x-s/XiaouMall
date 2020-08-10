@@ -1,3 +1,6 @@
-header .goBack{
+.goBack{
+    position: absolute;
+    margin-top: 0.2rem;
     margin-left: 0.3rem;
+    color: white;
 }

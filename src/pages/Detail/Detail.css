@@ -1,0 +1,62 @@
+.detail{
+
+}
+.detail .detailContent{
+
+}
+.detail .detailContent img{
+    width: 100vw;
+    height: 4.5rem;
+}
+.detail .detailContent .detailWord{
+    height: 2.5rem;
+}
+.detail .detailContent .detailWord .detailName{
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
+    font-size: 0.45rem;
+}
+.detail .detailContent .detailWord .detailPrice{
+    margin-top: 0.6rem;
+    margin-left: 0.5rem;
+    font-size: 0.35rem;
+    color: red;
+}
+.detail .detailContent .detailWord .detailPrice span{
+    font-size: 0.3rem;
+    margin-left: 0.3rem;
+    padding: 0.1rem;
+    color: orange;
+    border: 1px solid orange;
+}
+.detail .detailContent .detailWord p{
+    margin-left: 0.5rem;
+    margin-top: 0.3rem;
+    font-size:  0.3rem;
+    text-decoration: line-through;
+}
+.detail .arrImg p img{
+    width: 100vw;
+    height: 8rem;
+}
+.detail .detailContent footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.detail .detailContent footer .add{
+    overflow: hidden;
+    width: 100vw;
+    background-color: white;
+}
+.detail .detailContent footer .add p{
+    float: right;
+    padding: 0.35rem 0.25rem;
+    font-size: 0.3rem;
+    background-color: orange;
+    color: white;
+}
+.popup-list .am-list-body {
+    height: 210px;
+    overflow: auto;
+  }

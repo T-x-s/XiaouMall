@@ -12,7 +12,7 @@
 .detail .show .detail{
     float: left;
     margin-left: 0.2rem;
-    
+    margin-top: 0.4rem;
 }
 .detail .show .detail h2{
     padding-top: 0.1rem;
@@ -22,7 +22,7 @@
 }
 .detail .show .detail h3{
     font-size: 0.4rem;
-    padding-top: 0.5rem;
+    padding-top: 0.3rem;
     font-weight:normal;
     color: red;
 }
