@@ -4,8 +4,8 @@ import GoBack from "../../components/goBack/goBack";
 import { GetGoodsInfo } from "../../util/request";
 import querystring from "querystring";
 import "./Detail.css";
-import 'antd-mobile/dist/antd-mobile.css';
-import { Modal, List, Button, WhiteSpace, WingBlank, Icon } from "antd-mobile";
+import "antd-mobile/dist/antd-mobile.css";
+import { Modal, List, Button, WingBlank } from "antd-mobile";
 
 export default class Detail extends Component {
   constructor(props) {
@@ -13,7 +13,6 @@ export default class Detail extends Component {
     this.state = {
       msg: "商品详情",
       Info: [],
-      //   detail:false
       modal2: false,
     };
   }
@@ -29,9 +28,7 @@ export default class Detail extends Component {
       [key]: false,
     });
   };
-  shopCart(){
-      
-  }
+  shopCart() {}
   componentDidMount() {
     const id = querystring.parse(this.props.location.search.slice(1));
     console.log(id);
@@ -51,34 +48,6 @@ export default class Detail extends Component {
           return (
             <div className="detailContent" key={item.id}>
               <img src={item.img} alt="" />
-              
-              {/* ant-design插件 */}
-              <WingBlank>
-                <Button onClick={this.showModal("modal2")}>popup</Button>
-                <Modal
-                  popup
-                  visible={this.state.modal2}
-                  onClose={this.onClose("modal2")}
-                  animationType="slide-up"
-                  afterClose={() => {
-                    alert("afterClose");
-                  }}
-                >
-                  <List
-                    renderHeader={() => <div>委托买入</div>}
-                    className="popup-list"
-                  >
-                    {["股票名称", "股票代码", "买入价格"].map((i, index) => (
-                      <List.Item key={index}>{i}</List.Item>
-                    ))}
-                    <List.Item>
-                      <Button type="primary" onClick={this.onClose("modal2")}>
-                        买入
-                      </Button>
-                    </List.Item>
-                  </List>
-                </Modal>
-              </WingBlank>
               <div className="detailWord">
                 <div className="detailName">{item.goodsname}</div>
                 <div className="detailPrice">
@@ -94,9 +63,41 @@ export default class Detail extends Component {
               ></div>
 
               <footer>
-                <div className="add">
-                  <p onClick={() => this.shopCart()}>加入购物车</p>
-                </div>
+                <WingBlank>
+                  <p onClick={this.showModal("modal2")}>加入购物车</p>
+                  <Modal
+                    popup
+                    visible={this.state.modal2}
+                    onClose={this.onClose("modal2")}
+                    animationType="slide-up"
+                    // afterClose={() => {
+                    //   alert("afterClose");
+                    // }}
+                  >
+                    <List key={item.id} className="popup-list">
+                      <div className="listTop">
+                        <img src={item.img} alt="" />
+                        <span>{item.goodsname}</span>
+                      </div>
+                      <h5 className="specs">{item.goodsname}</h5>
+                      {(Info || []).map((item) => {
+                        let arr = JSON.parse(item.specsattr);
+                        console.log(arr);
+                        arr.map((arrItem) => {
+                          return (
+                              <span key={arrItem} className="span">{arrItem}</span> 
+                          );
+                        });
+                      })}
+
+                      <List.Item>
+                        <Button onClick={this.onClose("modal2")}>
+                          加入购物车
+                        </Button>
+                      </List.Item>
+                    </List>
+                  </Modal>
+                </WingBlank>
               </footer>
             </div>
           );
